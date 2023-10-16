@@ -8,15 +8,17 @@ import {
 import {
   MainContainer,
   ContentCard,
-  ContainerCardInfo,
+  ContainerProfile,
   HeaderContainerCard,
   DescriptionUserCard,
   FooterContainerCard,
   FormContainer,
   HeaderFormContainer,
+  ContainerPosts,
 } from "./styles";
 
 import { Header } from "../../components/Header";
+import { CardPost } from "../../components/CardPost";
 
 export function Home() {
   return (
@@ -24,7 +26,7 @@ export function Home() {
       <Header />
 
       <MainContainer>
-        <ContainerCardInfo>
+        <ContainerProfile>
           <img src="https://github.com/MayckonFer.png" alt="" />
 
           <ContentCard>
@@ -58,7 +60,7 @@ export function Home() {
               </li>
             </FooterContainerCard>
           </ContentCard>
-        </ContainerCardInfo>
+        </ContainerProfile>
 
         <FormContainer>
           <HeaderFormContainer>
@@ -68,6 +70,14 @@ export function Home() {
           </HeaderFormContainer>
           <input type="text" placeholder="Buscar conteúdo" required />
         </FormContainer>
+
+        <ContainerPosts>
+          <CardPost />
+          <CardPost />
+          <CardPost />
+          <CardPost />
+          <CardPost />
+        </ContainerPosts>
       </MainContainer>
     </>
   );

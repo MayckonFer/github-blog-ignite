@@ -4,10 +4,10 @@ export const MainContainer = styled.main`
   width: 100%;
   max-width: 864px;
   padding: 0 1.6rem;
-  margin: 0 auto;
+  margin: 0 auto 4rem;
 `;
 
-export const ContainerCardInfo = styled.div`
+export const ContainerProfile = styled.div`
   background-color: ${({ theme }) => theme.base_profile};
   box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -18,6 +18,10 @@ export const ContainerCardInfo = styled.div`
   display: flex;
   align-items: center;
   gap: 3.2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   img {
     width: 14.8rem;
@@ -35,6 +39,8 @@ export const HeaderContainerCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 
   width: 100%;
 
@@ -73,6 +79,7 @@ export const DescriptionUserCard = styled.p`
 export const FooterContainerCard = styled.ul`
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 2.4rem;
 
   margin-top: 2.4rem;
@@ -126,5 +133,20 @@ export const HeaderFormContainer = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.base_span};
     line-height: 160%;
+  }
+`;
+
+export const ContainerPosts = styled.section`
+  width: 100%;
+
+  margin-top: 4.8rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
   }
 `;
