@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const MainContainer = styled.main`
   width: 100%;
@@ -81,5 +81,50 @@ export const FooterContainerCard = styled.ul`
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+`;
+
+export const FormContainer = styled.form`
+  width: 100%;
+  margin-top: 7.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  input {
+    ${({ theme }) => css`
+      background-color: ${theme.base_input};
+      border: 1px solid ${({ theme }) => theme.base_border};
+      color: ${theme.white};
+    `}
+
+    border-radius: 6px;
+    padding: 1.2rem 1.6rem;
+    line-height: 160%;
+
+    &::placeholder {
+      color: ${({ theme }) => theme.base_label};
+    }
+  }
+`;
+
+export const HeaderFormContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.base_subtitle};
+    line-height: 160%;
+  }
+
+  span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: ${({ theme }) => theme.base_span};
+    line-height: 160%;
   }
 `;

@@ -12,6 +12,8 @@ import {
   HeaderContainerCard,
   DescriptionUserCard,
   FooterContainerCard,
+  FormContainer,
+  HeaderFormContainer,
 } from "./styles";
 
 import { Header } from "../../components/Header";
@@ -57,6 +59,15 @@ export function Home() {
             </FooterContainerCard>
           </ContentCard>
         </ContainerCardInfo>
+
+        <FormContainer>
+          <HeaderFormContainer>
+            <h2>Publicações</h2>
+
+            <span>6 publicações</span>
+          </HeaderFormContainer>
+          <input type="text" placeholder="Buscar conteúdo" required />
+        </FormContainer>
       </MainContainer>
     </>
   );
